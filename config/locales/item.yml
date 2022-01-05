@@ -1,0 +1,29 @@
+ja:
+  item:
+    id: "番号"
+    itemName: "アイテム名"
+    itemSize: "アイテムサイズ"
+    itemPrice: "アイテム価格"
+    itemCountry: "製造国"
+    itemDate: "日付"
+    email: "メール"
+    remark: "リマーク"
+    company: "製造会社"
+  validation:
+    message: "この項目は必須です。"
+    remark: "20文字以内を入力してください。"
+    email: "正しいメールアドレスに記入してください。"
+  message:
+    M001: "ユーザー名を入力してください。"
+    create_success: "新しいアイテムを入力しました。"
+    delete_success: "アイテムの削除が成功しました。"
+    update_success: "アイテムの更新が成功しました。"
+    error: "レコードが見つかりませんページをリロードしてください"
+    duplicate_error: "データが重複しているので入力ができません！"
+  common:
+    button:
+      save: "保存"
+      delete: "削除"
+      edit: "更新"
+      cancel: "クリア"
+      excel-export: "Excelファイルを出す"

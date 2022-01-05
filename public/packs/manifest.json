@@ -1,0 +1,27 @@
+{
+  "application.js": "/packs/js/application-3f814344f943d33759dc.js",
+  "application.js.map": "/packs/js/application-3f814344f943d33759dc.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-3f814344f943d33759dc.js"
+      ],
+      "js.map": [
+        "/packs/js/application-3f814344f943d33759dc.js.map"
+      ]
+    },
+    "hello_react": {
+      "js": [
+        "/packs/js/hello_react-5b5036a2836103f2e200.js"
+      ],
+      "js.map": [
+        "/packs/js/hello_react-5b5036a2836103f2e200.js.map"
+      ]
+    }
+  },
+  "hello_react.js": "/packs/js/hello_react-5b5036a2836103f2e200.js",
+  "hello_react.js.map": "/packs/js/hello_react-5b5036a2836103f2e200.js.map",
+  "media/components/Images/Screenshot (58).png": "/packs/media/components/Images/Screenshot%20(58)-b6518077c79d4b122cf2eac58644c355.png",
+  "media/components/Images/Screenshot 2021-10-11 134943.png": "/packs/media/components/Images/Screenshot%202021-10-11%20134943-34ebf6bbaab49200be47e7a5c35ddfb7.png",
+  "media/images/logo.svg": "/packs/media/images/logo-80f6ec4b.svg"
+}
