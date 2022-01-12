@@ -3,6 +3,7 @@ import { Breadcrumb, Layout } from "antd";
 import I18n from "i18n-js";
 import "../../bundles/i18n/ja.js";
 import SideBar from "../home/_sideBar";
+import UserForm from "./_user_form.jsx";
 const { Content } = Layout;
 class User extends React.Component {
   render() {
@@ -19,7 +20,7 @@ class User extends React.Component {
               className="site-layout-background"
               style={{ padding: 24, minHeight: 360 }}
             >
-              <h1>Hello Soe Soe</h1>
+              <UserForm />
             </div>
           </Content>
         </Layout>

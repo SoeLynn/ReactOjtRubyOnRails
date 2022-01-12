@@ -1,11 +1,48 @@
-# Logfile created on 2022-01-05 15:53:28 +0630 by logger.rb/v1.4.2
-ItemDevLog: Started GET "/api/v1/item.json" for ::1 at 2022-01-05 15:53:28 +0630ItemDevLog: Processing by Api::V1::ItemController#indexItem as JSONItemDevLog:   [1m[35m (5.6ms)[0m  [1m[34mselect items.id as item_id, companies.id as company_id,
-                  sizes.id as size_id, items.name, items.price, items.country, 
-                  items.manafacture_date, items.email, items.remark, items.image, companies.company_name,
-                  sizes.size from items, companies, sizes 
-                  where companies.id = items.company_id
-                  and sizes.id = items.size_id[0mItemDevLog:   ↳ app/controllers/api/v1/item_controller.rb:12:in `indexItem'ItemDevLog:   [1m[36mSize Load (1.5ms)[0m  [1m[34mSELECT "sizes".* FROM "sizes"[0mItemDevLog:   ↳ app/controllers/api/v1/item_controller.rb:22:in `indexItem'ItemDevLog:   [1m[36mCompany Load (1.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0mItemDevLog:   ↳ app/controllers/api/v1/item_controller.rb:22:in `indexItem'ItemDevLog: Completed 200 OK in 1575ms (Views: 20.3ms | ActiveRecord: 38.9ms | Allocations: 15632)
+# Logfile created on 2022-01-12 13:51:00 +0630 by logger.rb/v1.4.2
+ItemDevLog: Processing by Api::V1::LoginController#login as HTMLItemDevLog:   Parameters: {"user"=>{"email"=>"soe@gmail.com", "encrypted_password"=>"[FILTERED]"}, "login"=>{"user"=>{"email"=>"soe@gmail.com", "encrypted_password"=>"[FILTERED]"}}}ItemDevLog: Can't verify CSRF token authenticity.ItemDevLog: [31mUnpermitted parameter: :encrypted_password[0mItemDevLog: No template found for Api::V1::LoginController#login, rendering head :no_contentItemDevLog: Completed 204 No Content in 19ms (Allocations: 1217)
 
-ItemDevLog: Started POST "/upload.do" for ::1 at 2022-01-05 15:54:19 +0630ItemDevLog:   
-ActionController::RoutingError (No route matches [POST] "/upload.do"):
-  ItemDevLog:   Rendering C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erbItemDevLog:   Rendering C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erbItemDevLog:   Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (Duration: 1.3ms | Allocations: 215)ItemDevLog:   Rendered C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (Duration: 15.9ms | Allocations: 644)ItemDevLog: Started POST "/api/v1/item" for ::1 at 2022-01-05 15:54:37 +0630
+ItemDevLog: Started GET "/" for ::1 at 2022-01-12 13:53:52 +0630ItemDevLog: Processing by HomeController#index as HTMLItemDevLog:   Rendering layout layouts/application.html.erbItemDevLog:   Rendering home/index.html.erb within layouts/applicationItemDevLog:   Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 87)ItemDevLog: [Webpacker] Compiling...ItemDevLog: [Webpacker] Compiled all packs in C:/Users/GIC/Desktop/ReactandRailsOJT/outline-create-too-mdy_nodockerSLA/public/packsItemDevLog: [Webpacker] Hash: eafc53d50ab19040c094
+Version: webpack 4.46.0
+Time: 30900ms
+Built at: 01/12/2022 1:54:28 PM
+                                                                                    Asset      Size       Chunks                         Chunk Names
+                                                   js/application-1f2a4ab47266e237e124.js  12.5 MiB  application  [emitted] [immutable]  application
+                                               js/application-1f2a4ab47266e237e124.js.map  10.5 MiB  application  [emitted] [dev]        application
+                                                   js/hello_react-5b5036a2836103f2e200.js  1.09 MiB  hello_react  [emitted] [immutable]  hello_react
+                                               js/hello_react-5b5036a2836103f2e200.js.map  1.26 MiB  hello_react  [emitted] [dev]        hello_react
+                                                                            manifest.json  3.37 KiB               [emitted]              
+             media/components/Images/Screenshot (57)-9b994776f19b818d93d4554cfcf8e35c.png   186 KiB               [emitted]              
+             media/components/Images/Screenshot (58)-b6518077c79d4b122cf2eac58644c355.png   222 KiB               [emitted]              
+             media/components/Images/Screenshot (59)-36e0d0a139df5a33045615370b7d570c.png   175 KiB               [emitted]              
+media/components/Images/Screenshot 2021-10-11 084724-bdb6ebc8b4c904b85f945e97b04a96d5.png  97.1 KiB               [emitted]              
+media/components/Images/Screenshot 2021-10-11 084804-435d46debb9b709d9cb9e580f6ce89e9.png  95.7 KiB               [emitted]              
+media/components/Images/Screenshot 2021-10-11 084853-ad1dbe2b1d5381b4b0a133862c94b90e.png  93.4 KiB               [emitted]              
+media/components/Images/Screenshot 2021-10-11 084917-fb955c81fb2aaef19c9936afbdd25d20.png   102 KiB               [emitted]              
+media/components/Images/Screenshot 2021-10-11 084940-460c98adf2c70631ab2138b55300e1c4.png   109 KiB               [emitted]              
+media/components/Images/Screenshot 2021-10-11 085010-ed07366bd120793687d035145b04d83a.png    95 KiB               [emitted]              
+media/components/Images/Screenshot 2021-10-11 085033-7fc1f4e2e070b34fc19e4dce8886174a.png   100 KiB               [emitted]              
+media/components/Images/Screenshot 2021-10-11 085058-df7237a4a8ef39984519a296c7b500e0.png   111 KiB               [emitted]              
+media/components/Images/Screenshot 2021-10-11 085120-7646fb4521856d9f9351e1e6d1b5e785.png   107 KiB               [emitted]              
+media/components/Images/Screenshot 2021-10-11 085207-27a70de2a7d8a237f9e217e1dd765d70.png   105 KiB               [emitted]              
+media/components/Images/Screenshot 2021-10-11 090325-51e3257e1095919aeb53232af9cfbec2.png  72.2 KiB               [emitted]              
+media/components/Images/Screenshot 2021-10-11 090352-6b93d830ded4c0deabc0893de4d5ab39.png  69.8 KiB               [emitted]              
+media/components/Images/Screenshot 2021-10-11 134943-34ebf6bbaab49200be47e7a5c35ddfb7.png  42.1 KiB               [emitted]              
+                          media/components/Images/ss-3fb506aa6583c277ea50e2d64fe051ab.png   103 KiB               [emitted]              
+                                                           media/images/logo-80f6ec4b.svg  2.32 KiB               [emitted]              
+Entrypoint application = js/application-1f2a4ab47266e237e124.js js/application-1f2a4ab47266e237e124.js.map
+Entrypoint hello_react = js/hello_react-5b5036a2836103f2e200.js js/hello_react-5b5036a2836103f2e200.js.map
+[./app/assets/images/logo.svg] 76 bytes {application} [built]
+[./app/assets/stylesheets/application.css] 607 bytes {application} [built]
+[./app/javascript/bundles/i18n/ja.js] 20.2 KiB {application} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 1.94 KiB {application} [built]
+[./app/javascript/components/Images sync recursive ^\.\/.*$] ./app/javascript/components/Images sync ^\.\/.*$ 1.26 KiB {application} [built]
+[./app/javascript/packs/application.js] 655 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.11 KiB {hello_react} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./app/assets/stylesheets/application.css] ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/postcss-loader/src??ref--5-2!./app/assets/stylesheets/application.css 5.67 KiB {application} [built]
+[./node_modules/moment/locale sync recursive ^\.\/.*$] ./node_modules/moment/locale sync ^\.\/.*$ 3.21 KiB {application} [optional] [built]
+[./node_modules/webpack/buildin/amd-options.js] (webpack)/buildin/amd-options.js 80 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 2723 hidden modules

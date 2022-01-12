@@ -1,6 +1,7 @@
 class Item < ApplicationRecord
     belongs_to :company
     belongs_to :size
+    belongs_to :user
     # validates :name, uniqueness: true
     # validates :country, uniqueness: true
     # validates :price, uniqueness: true

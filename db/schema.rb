@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_29_071539) do
+ActiveRecord::Schema.define(version: 2022_01_10_093009) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,7 +34,9 @@ ActiveRecord::Schema.define(version: 2021_12_29_071539) do
     t.integer "company_id"
     t.integer "size_id"
     t.string "image"
+    t.integer "user_id"
     t.index ["company_id"], name: "index_items_on_company_id"
+    t.index ["user_id"], name: "index_items_on_user_id"
   end
 
   create_table "sizes", force: :cascade do |t|
@@ -45,12 +47,15 @@ ActiveRecord::Schema.define(version: 2021_12_29_071539) do
 
   create_table "users", force: :cascade do |t|
     t.string "user_name", limit: 255, null: false
-    t.integer "del_flg", limit: 2, default: 0, null: false
-    t.integer "create_user", null: false
-    t.integer "update_user", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "image"
+    t.integer "del_flg", limit: 2, default: 0
+    t.integer "create_user"
+    t.integer "update_user"
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
+    t.string "email", default: "", null: false
+    t.datetime "remember_created_at"
+    t.string "password_digest"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end

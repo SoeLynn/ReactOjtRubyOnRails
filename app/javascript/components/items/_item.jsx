@@ -106,7 +106,7 @@ class Item extends React.Component {
 
   // データの挿入と更新
   onFinish = (item) => {
-    console.log("front image file..... = ", item.image.originFileObj);
+    // console.log("front image file..... = ", item.image.originFileObj);
     // 挿入条件と更新条件の管理
     // アイテムフォームにitemのidがない場合は 挿入条件をします。
     item.name = validator.trim(item.name);

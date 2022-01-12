@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     namespace :v1 do
       # ユーザー管理画面
       get 'user/indexUser', to: "user#indexUser"
+        # 新しいアイテムを作成するroute_path
+      post 'user', to: "user#create"
+      post 'user/login', to: "login#login"
     end
   end
   get 'home/index'
