@@ -8,10 +8,10 @@ class Api::V1::UserController < ApplicationController
   end
 
   def create
+    puts("call session value = ", session[:user_id]);
     @users = User.all
     flash[:notice] = "新しいユーザーを保存できました。"
     User.create(user_params)
-    puts("user data = ", user_params);
       render json: { :successMessage => flash[:notice], :users => @users }
   end
 

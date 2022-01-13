@@ -1,5 +1,0 @@
-# Logfile created on 2022-01-12 14:11:54 +0630 by logger.rb/v1.4.2
-ItemDevLog: Completed 204 No Content in 3ms (Allocations: 426)
-
-ItemDevLog: Started POST "/api/v1/user/login" for ::1 at 2022-01-12 14:12:33 +0630ItemDevLog: Processing by Api::V1::LoginController#login as HTMLItemDevLog:   Parameters: {"user"=>{"email"=>"soe@gmail.com", "encrypt_password"=>"[FILTERED]"}, "login"=>{"user"=>{"email"=>"soe@gmail.com", "encrypt_password"=>"[FILTERED]"}}}ItemDevLog: Can't verify CSRF token authenticity.ItemDevLog: No template found for Api::V1::LoginController#login, rendering head :no_contentItemDevLog: Completed 204 No Content in 2ms (Allocations: 420)
-
