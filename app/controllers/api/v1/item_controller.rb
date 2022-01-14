@@ -1,5 +1,6 @@
 class Api::V1::ItemController < ApplicationController
  # before_action :set_item, only: %i[ update, destroy ]
+ skip_before_action :verify_authenticity_token
     def indexItem
       @sizes = Size.all
       @companies = Company.all
@@ -44,16 +45,14 @@ class Api::V1::ItemController < ApplicationController
     end
   
     def create
-      puts("back imgae file.....1 = ", item_params);
-      puts("back imgae file.....2 = ", item_params[:image]);
-      # 成功するメッセージを作る。
       flash[:notice] = I18n.t("message.create_success")
-      @item = Item.create(item_params)
+      Item.create(item_params)
       render json: { :successMessage => flash[:notice] }
     end
   
     def update
       # 成功するメッセージを作る。
+      puts('hello item update==============', item_params);
       flash[:notice] = I18n.t("message.update_success")
       item = Item.find(params[:id])
       item.update(item_params)
@@ -70,9 +69,10 @@ class Api::V1::ItemController < ApplicationController
     end
 
     private
+    
     def item_params
        params.require(:item).permit(:id, :name, :price, :country, :manafacture_date,
-       :email, :remark, :image, :imageFile, :size_id, :company_id)
+       :email, :remark, :image, :size_id, :company_id)
     end
 
   end

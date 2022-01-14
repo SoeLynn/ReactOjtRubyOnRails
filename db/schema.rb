@@ -27,16 +27,14 @@ ActiveRecord::Schema.define(version: 2022_01_10_093009) do
     t.integer "price"
     t.date "manafacture_date"
     t.string "size"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
     t.string "email"
     t.string "remark"
     t.integer "company_id"
     t.integer "size_id"
     t.string "image"
-    t.integer "user_id"
     t.index ["company_id"], name: "index_items_on_company_id"
-    t.index ["user_id"], name: "index_items_on_user_id"
   end
 
   create_table "sizes", force: :cascade do |t|

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       get 'user/indexUser', to: "user#indexUser"
         # 新しいアイテムを作成するroute_path
       post 'user', to: "user#create"
-      post 'user/login', to: "sessions#login"
+      post 'user/login', to: "login#login"
     end
   end
   get 'home/index'
