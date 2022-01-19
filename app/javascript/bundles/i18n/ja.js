@@ -12,6 +12,10 @@ I18n.translations["en"] = I18n.extend((I18n.translations["en"] || {}), {
       }
     }
   },
+  "button": {
+    "login": "ログイン",
+    "register": "登録"
+  },
   "common": {
     "button": {
       "cancel": "クリア",
@@ -295,6 +299,7 @@ I18n.translations["en"] = I18n.extend((I18n.translations["en"] || {}), {
     "menu1": {
       "side1": "ユーザー管理",
       "side2": "アイテムー管理",
+      "side3": "ログアウト",
       "title": "設定"
     }
   },
@@ -412,6 +417,9 @@ I18n.translations["en"] = I18n.extend((I18n.translations["en"] || {}), {
   "user": {
     "email": "メールアドレス",
     "id": "番号",
+    "password": "パスワード",
+    "rePassword": "確認パスワード",
+    "role": "役割",
     "userName": "ユーザー名"
   },
   "validation": {
@@ -431,6 +439,10 @@ I18n.translations["ja"] = I18n.extend((I18n.translations["ja"] || {}), {
         }
       }
     }
+  },
+  "button": {
+    "login": "ログイン",
+    "register": "登録"
   },
   "common": {
     "button": {
@@ -613,6 +625,7 @@ I18n.translations["ja"] = I18n.extend((I18n.translations["ja"] || {}), {
     "menu1": {
       "side1": "ユーザー管理",
       "side2": "アイテムー管理",
+      "side3": "ログアウト",
       "title": "設定"
     }
   },
@@ -723,6 +736,9 @@ I18n.translations["ja"] = I18n.extend((I18n.translations["ja"] || {}), {
   "user": {
     "email": "メールアドレス",
     "id": "番号",
+    "password": "パスワード",
+    "rePassword": "確認パスワード",
+    "role": "役割",
     "userName": "ユーザー名"
   },
   "validation": {

@@ -76,13 +76,13 @@ class ItemTable extends React.Component {
         dataIndex: "remark",
       },
 
-      {
-        title: "写真",
-        dataIndex: "image",
-        // render: (text, record) => {
-        //   return <img src={image} style={{ width: "120%" }} />;
-        // },
-      },
+      // {
+      //   title: "写真",
+      //   dataIndex: "image",
+      //   // render: (text, record) => {
+      //   //   return <img src={image} style={{ width: "120%" }} />;
+      //   // },
+      // },
 
       {
         title: "",

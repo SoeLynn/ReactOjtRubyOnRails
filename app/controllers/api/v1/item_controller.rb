@@ -1,12 +1,14 @@
 class Api::V1::ItemController < ApplicationController
  # before_action :set_item, only: %i[ update, destroy ]
+ before_action :no_login, only:[ :indexItem, :index, :create, :update, :destroy ]
  skip_before_action :verify_authenticity_token
     def indexItem
+      puts("session exit", session[:user_role]);
       @sizes = Size.all
       @companies = Company.all
       itemList = "select items.id as item_id, companies.id as company_id,
                   sizes.id as size_id, items.name, items.price, items.country, 
-                  items.manafacture_date, items.email, items.remark, items.image, companies.company_name,
+                  items.email, items.remark, companies.company_name,
                   sizes.size from items, companies, sizes 
                   where companies.id = items.company_id
                   and sizes.id = items.size_id"
@@ -45,34 +47,49 @@ class Api::V1::ItemController < ApplicationController
     end
   
     def create
+      if session[:user_role] == "admin"
       flash[:notice] = I18n.t("message.create_success")
       Item.create(item_params)
       render json: { :successMessage => flash[:notice] }
+      else
+       render json: { :successMessage =>"許可がないので登録ができません！" }  
+      end
     end
   
     def update
       # 成功するメッセージを作る。
-      puts('hello item update==============', item_params);
+      if session[:user_role] == "admin"
       flash[:notice] = I18n.t("message.update_success")
       item = Item.find(params[:id])
       item.update(item_params)
       render json: {:successMessage => flash[:notice]}
+      else
+        render json: { :successMessage =>"許可がないので更新ができません！" }  
+      end
     end
   
     def destroy
+      if session[:user_role] == "admin"
       #  成功するメッセージを作る。
       flash[:notice] = I18n.t("message.delete_success")
       Item.destroy(params[:id])
-      # head :ok
-      puts(flash[:notice]);
       render json: {:successMessage => flash[:notice]}
+      else
+        render json: { :successMessage =>"許可がないので削除ができません！" }  
+      end
+    end
+
+    def no_login
+      if !session[:user_id]
+      redirect_to root_path
+      end
     end
 
     private
     
     def item_params
-       params.require(:item).permit(:id, :name, :price, :country, :manafacture_date,
-       :email, :remark, :image, :size_id, :company_id)
+       params.require(:item).permit(:name, :country, :price,
+       :email, :remark, :company_name, :company_id, :size_id)
     end
 
   end

@@ -36,6 +36,7 @@ ja:
       title: "設定"
       side1: "ユーザー管理"
       side2: "アイテムー管理"
+      side3: "ログアウト"
   user:
     id: "番号"
     userName: "ユーザー名"

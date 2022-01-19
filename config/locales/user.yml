@@ -1,0 +1,11 @@
+ja:
+  user:
+    id: "番号"
+    userName: "ユーザー名"
+    email: "メールアドレス"
+    role: "役割"
+    password: "パスワード"
+    rePassword: "確認パスワード"
+  button:
+    register: "登録"
+    login: "ログイン"

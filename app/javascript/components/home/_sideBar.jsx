@@ -1,10 +1,11 @@
 import React from "react";
 import I18n from "i18n-js";
 import "../../bundles/i18n/ja.js";
-import { Layout, Menu } from "antd";
+import { Layout, Menu, message } from "antd";
 import { Link } from "react-router-dom";
 import { SettingOutlined } from "@ant-design/icons";
 import logo from "../../../assets/images/logo.svg";
+import axios from "axios";
 
 const { Sider } = Layout;
 const { SubMenu } = Menu;
@@ -38,6 +39,12 @@ class SideBar extends React.Component {
     } else {
       this.setState({ openKeys: latestOpenKey ? [latestOpenKey] : [] });
     }
+  };
+
+  signOut = () => {
+    axios.get("/api/v1/logout").then((response) => {
+      message.success(response.data.successMessage);
+    });
   };
 
   render() {
@@ -96,6 +103,12 @@ class SideBar extends React.Component {
               <Link to="/items"> {I18n.t("home.menu1.side2")}</Link>
             </Menu.Item>
 
+            <Menu.Item key="/logout">
+              <Link to="" onClick={this.signOut}>
+                {" "}
+                {I18n.t("home.menu1.side3")}
+              </Link>
+            </Menu.Item>
           </SubMenu>
         </Menu>
       </Sider>

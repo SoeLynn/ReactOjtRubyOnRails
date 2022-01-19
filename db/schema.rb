@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_10_093009) do
+ActiveRecord::Schema.define(version: 2022_01_19_081022) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,16 +25,15 @@ ActiveRecord::Schema.define(version: 2022_01_10_093009) do
     t.string "name"
     t.string "country"
     t.integer "price"
-    t.date "manafacture_date"
-    t.string "size"
-    t.datetime "created_at", precision: 6
-    t.datetime "updated_at", precision: 6
     t.string "email"
     t.string "remark"
+    t.string "company_name"
+    t.datetime "created_at", precision: 6
+    t.datetime "updated_at", precision: 6
     t.integer "company_id"
     t.integer "size_id"
-    t.string "image"
     t.index ["company_id"], name: "index_items_on_company_id"
+    t.index ["size_id"], name: "index_items_on_size_id"
   end
 
   create_table "sizes", force: :cascade do |t|
@@ -53,6 +52,7 @@ ActiveRecord::Schema.define(version: 2022_01_10_093009) do
     t.string "email", default: "", null: false
     t.datetime "remember_created_at"
     t.string "password_digest"
+    t.string "role"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

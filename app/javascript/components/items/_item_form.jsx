@@ -121,9 +121,9 @@ const ItemForm = ({
     },
   ];
 
-  const normFile = (e) => {
-    return e && e.file;
-  };
+  // const normFile = (e) => {
+  //   return e && e.file;
+  // };
 
   return (
     <div>
@@ -265,7 +265,7 @@ const ItemForm = ({
           <Input.TextArea style={{ width: "60%", resize: "none" }} />
         </Form.Item>
 
-        <Form.Item
+        {/* <Form.Item
           name="image"
           label="ファイル"
           valuePropName="file"
@@ -276,7 +276,7 @@ const ItemForm = ({
               写真を選んでください
             </Button>
           </Upload>
-        </Form.Item>
+        </Form.Item> */}
 
         {/* companiesのテーブルIDを運ぶ */}
         <Form.Item label=" " name="company_id" style={{ display: "none" }}>

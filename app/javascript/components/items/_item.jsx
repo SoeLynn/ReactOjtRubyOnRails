@@ -27,6 +27,7 @@ class Item extends React.Component {
       searchText: "",
       searchedColumn: "",
       successMessage: null,
+      tempItem: "",
     };
   }
 
@@ -74,12 +75,12 @@ class Item extends React.Component {
             company_id: item.company_id,
             remark: item.remark,
             size_id: item.size_id,
-            image: (
-              <img
-                src={require(`../Images/${item.image}`)}
-                style={{ width: "150%" }}
-              />
-            ),
+            // image: (
+            //   <img
+            //     src={require(`../Images/${item.image}`)}
+            //     style={{ width: "150%" }}
+            //   />
+            // ),
           };
           this.setState((prevState) => ({
             items: [...prevState.items, newItem],
@@ -106,12 +107,11 @@ class Item extends React.Component {
 
   // データの挿入と更新
   onFinish = (item) => {
-    // console.log("front image file..... = ", item.image.originFileObj);
     // 挿入条件と更新条件の管理
     // アイテムフォームにitemのidがない場合は 挿入条件をします。
     item.name = validator.trim(item.name);
-    item.image = item.image.name;
-    item.imageFile = item.image.originFileObj;
+    // item.image = item.image.name;
+    // item.imageFile = item.image.originFileObj;
     if (item.id == undefined) {
       // 重複チェックをする機能
       if (
@@ -167,9 +167,10 @@ class Item extends React.Component {
         message.warning(response.data.errors);
       } else {
         //　 削除条件が成功する場合テーブルのデータをリロードしないで表示する。
-        this.setState({
-          items: this.state.items.filter((item) => item.key !== id),
-        });
+        this.componentDidMount();
+        // this.setState({
+        //   items: this.state.items.filter((item) => item.key !== id),
+        // });
         // 成功するメッセージを表示する。
         message.success(response.data.successMessage);
       }

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get 'users', to: "api/v1/user#index"
- # get 'items', to: "api/v1/item#index"
   devise_for :users
   namespace :api do
     namespace :v1 do
@@ -9,6 +8,7 @@ Rails.application.routes.draw do
         # 新しいアイテムを作成するroute_path
       post 'user', to: "user#create"
       post 'user/login', to: "login#login"
+      get 'logout', to: "login#logout"
     end
   end
   get 'home/index'
@@ -30,5 +30,8 @@ Rails.application.routes.draw do
       post 'item/update/:id', to: "item#update"
     end
   end
+# else
+#    get 'home/index'
+# end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
